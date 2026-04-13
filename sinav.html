@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Dijital Portfolyo | Moud Moussa</title>
     <style>
-        /* Variables CSS pour les thèmes Clair/Sombre */
+        
         :root {
             --ana-renk: #ffffff;
             --yazi-renk: #1a1a1a;
             --kart-renk: #f9f9f9;
-            --vurgu-renk: #cca100; /* Goldenrod */
+            --vurgu-renk: #cca100; 
         }
 
         .dark-mode {
@@ -28,7 +28,7 @@
             transition: 0.4s;
         }
 
-        /* Header & Nav */
+        
         header {
             display: flex;
             justify-content: space-between;
@@ -43,10 +43,10 @@
 
         .logo { font-weight: bold; font-size: 24px; letter-spacing: 2px; text-decoration: none; color: inherit;}
 
-        /* Effet Typewriter (Daktilo Efekti) */
+        
         #daktiloEfekti { color: var(--vurgu-renk); font-weight: bold; min-height: 1.2em; }
 
-        /* Banner */
+        
         .banner {
             background-color: black;
             color: white;
@@ -56,27 +56,27 @@
             text-transform: uppercase;
         }
 
-        /* Sections Générales */
+        
         section { padding: 80px 10%; border-bottom: 1px solid #eee; }
         h2 { text-align: center; margin-bottom: 40px; text-transform: uppercase; }
 
-        /* --- 1. AJOUT PHOTO DE PROFIL --- */
+        
         .profil-container { text-align: center; margin-bottom: 30px; }
         .profil-foto { 
             width: 180px; 
             height: 180px; 
             border-radius: 50%; 
-            object-fit: cover; /* Important pour ne pas déformer l'image */
+            object-fit: cover; 
             border: 5px solid var(--vurgu-renk);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        /* Yetenek Barı (Effet 2 obligatoire) */
+        
         .yetenek-alani { max-width: 600px; margin: 0 auto; }
         .bar-cerceve { background: #e0e0e0; border-radius: 20px; margin-bottom: 20px; overflow: hidden; height: 15px; }
         .bar-doluluk { background: var(--vurgu-renk); height: 100%; width: 0; transition: width 2s ease-in-out; }
 
-        /* Proje Filtreleme */
+        
         .filtre-butonlar { text-align: center; margin-bottom: 30px; }
         .filtre-butonlar button {
             padding: 10px 25px;
@@ -98,16 +98,16 @@
 
         .proje-kart {
             background: var(--kart-renk);
-            padding: 0; /* Pour que l'image prenne toute la largeur */
+            padding: 0; 
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            overflow: hidden; /* Pour que l'image respecte les coins arrondis */
+            overflow: hidden; 
             transition: 0.3s;
         }
         .proje-kart:hover { transform: translateY(-5px); }
 
-        /* --- 2. AJOUT IMAGES PROJETS --- */
+        
         .proje-resim {
             width: 100%;
             height: 200px;
@@ -116,7 +116,7 @@
         }
         .proje-icerik { padding: 20px; }
 
-        /* Footer */
+        
         footer {
             background: black;
             color: white;
@@ -128,7 +128,7 @@
 
         .social-icons span { font-size: 24px; margin-right: 15px; cursor: pointer; }
 
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; }
             section { padding: 40px 5%; }
@@ -222,8 +222,8 @@
     </footer>
 
     <script>
-        // --- 3. AJOUT DES URL D'IMAGES DANS LES DONNÉES DES PROJETS ---
-        // J'utilise ici des images de placeholder provenant de pravatar.cc
+        
+        
         const tumProjeler = [
             { 
                 ad: "E-Ticaret Platformu", 
@@ -259,7 +259,7 @@
 
         const projeListesi = document.getElementById('projeListesi');
 
-        // 4. Dinamik Proje Listeleme (forEach avec Image)
+        
         function projeleriGoster(liste) {
             projeListesi.innerHTML = "";
             liste.forEach(proje => {
@@ -277,7 +277,7 @@
             });
         }
 
-        // 5. İnteraktif Filtreleme (filter)
+        
         function projeleriFiltrele(kategori) {
             if (kategori === 'Hepsi') {
                 projeleriGoster(tumProjeler);
@@ -287,7 +287,7 @@
             }
         }
 
-        // 6. Karanlık/Aydınlık Mod
+        
         const temaButon = document.getElementById('temaButon');
         temaButon.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -298,7 +298,7 @@
             }
         });
 
-        // 7. Daktilo Efekti (Typewriter)
+       
         const metin = "Yaratıcı Geliştirici & Tasarımcı";
         let harfIndex = 0;
         function yazdir() {
@@ -309,10 +309,10 @@
             }
         }
 
-        // Başlangıç Fonksiyonları (window.onload obligatwaire)
+        
         window.onload = () => {
-            projeleriGoster(tumProjeler); // Liste par défaut
-            yazdir(); // Lance l'effet Typewriter
+            projeleriGoster(tumProjeler); 
+            yazdir(); 
         };
     </script>
 </body>
